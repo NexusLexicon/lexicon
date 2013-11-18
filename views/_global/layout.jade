@@ -1,0 +1,36 @@
+doctype html
+html(data-ng-app="lexicon")
+  head
+    title= pageTitle
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+    link(href="assets/vendor/bootstrap/3.0.2/css/bootstrap.less", rel="stylesheet")
+
+  body
+    .header
+      .container
+        nav.navbar.navbar-default(role="navigation")
+          .navbar-header
+            button.navbar-toggle(type="button", data-toggle="collapse", data-target="#navbar-collapse")
+              span.sr-only Toggle Navigation
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            a.navbar-brand(href="#") Lexicon
+
+          .collapse.navbar-collapse#navbar-collapse
+            ul.nav.navbar-nav
+              li.active: a(href="#/") Home
+              li: a(href="#/spells") Spells
+    .content
+      .container
+        block content
+    .footer
+      .container
+        h1 Footer
+
+    script(src="assets/vendor/jquery/2.0.3/js/jquery.js")
+    script(src="assets/vendor/bootstrap/3.0.2/js/bootstrap.js")
+    script(src="assets/vendor/angular/1.2.1/js/angular.js")
+    script(src="assets/vendor/angular/1.2.1/js/angular-route.js")
+    script(src="assets/js/_angular/app.js")

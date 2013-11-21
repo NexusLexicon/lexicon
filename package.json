@@ -1,6 +1,6 @@
 {
-  "name": "application-name",
-  "version": "0.0.1",
+  "name": "lexicon",
+  "version": "0.0.2",
   "private": true,
   "main": "app.js",
   "scripts": {
@@ -11,6 +11,7 @@
     "jade": "*",
     "mincer": "~0.5.12",
     "startup": "~0.3.0",
-    "less": "~1.5.0"
+    "less": "~1.5.0",
+    "simple-http-proxy": "~0.5.7"
   }
 }

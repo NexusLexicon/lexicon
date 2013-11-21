@@ -1,6 +1,7 @@
 var express = require('express');
 var path = require('path');
 var Mincer = require('mincer');
+var proxy = require('simple-http-proxy');
 
 // Mincer.logger.use(console);
 
@@ -35,3 +36,6 @@ app.get(/^\/_partials\/(.*)$/, function(req, res) {
   console.log(req.params[0]);
   res.render("_partials/" + req.params[0]);
 });
+
+app.use('/api', proxy("http://localhost:3000/"));
+
